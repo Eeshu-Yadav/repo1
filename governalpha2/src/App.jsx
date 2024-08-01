@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className=' flex bg-richblack-900 text-richblack-5'>
-   <nav className="flex flex-col min-w-[14rem] min-h-[100vh] pb-20 justify-between pl-4 py-10 bg-richblack-800 text-white">
+   <nav className="flex flex-col min-w-[13rem] min-h-[100vh] pb-20 gap-[11rem] pl-5 py-10 bg-richblack-800 text-white">
       <div className="flex flex-col gap-5">
         <Link to="/" className={`flex items-center space-x-2 p-3 rounded-l-full ${isActive=="Dashboard"?"bg-yellow-100 text-richblack-900 shadow-lg shadow-richblack-900":"bg-richblack-900"}`} onClick={()=>setActive("Dashboard")}>
           <FaTachometerAlt />
