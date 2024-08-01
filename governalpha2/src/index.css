@@ -1,68 +1,130 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.custom-gradient {
+  background: linear-gradient(
+    118.19deg,
+    #1fa2ff -3.62%,
+    #12d8fa 50.44%,
+    #a6ffcb 104.51%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.custom-gradient-orange {
+  background: -webkit-linear-gradient(#de6d0b, #d3c71a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.orange{
+  background: -webkit-linear-gradient(rgb(255, 28, 0), #e68d3bbe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.redGradient{
+  background: linear-gradient(
+    118.19deg,
+    #833AB4 -0.62%,
+    #db0909 13.44%,
+    #ad0202 50.44%,
+    #eb4e0a 104.51%
+  );
+  /* background: -webkit-linear-gradient(#833AB4,#833ab46f,#FD1D1D,#fd1d1dc1, #eb6b0a); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+.circular-gradient-bg {
+  background: radial-gradient(circle, #1fa2ff, #12d8fa, #a6ffcb);
+}
+.codeblock2 {
+  background: linear-gradient(
+    118.19deg,
+    #1fa2ff -3.62%,
+    #12d8fa 50.44%,
+    #a6ffcb 104.51%
+  );
+  border-radius: 100%;
+  filter: blur(34px);
+  height: 257.05px;
+  left: calc(50% - 263.005px);
+  opacity: 0.2;
+  top: calc(50% - 175.995px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  width: 372.95px;
+}
+.codeblock1 {
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    orange 59.04%,
+    #f8f8ff 124.53%
+  );
+  border-radius: 100%;
+  filter: blur(34px);
+  height: 105.05px;
+  left: calc(50% - 263.005px);
+  opacity: 0.2;
+  top: calc(50% - 175.995px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  width: 372.95px;
+}
+.codeblock3 {
+  background: linear-gradient(
+    123.77deg,
+    #f50e0e 96.46%,
+    rgb(191, 110, 17) 89.04%,
+    #db5fcf 124.53%
+  );
+  border-radius: 100%;
+  filter: blur(34px);
+  height: 257.05px;
+  left: calc(50% - 263.005px);
+  opacity: 0.2;
+  top: calc(50% - 175.995px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  width: 372.95px;
+}
+/* Custom scrollbar styles for WebKit browsers */
+/* Custom scrollbar styles for WebKit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #161D29; /* Track background */
+  border-radius: 10px; /* Rounded corners for the track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #000814, #000814); /* Gradient for the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #06388371; /* Border around the thumb */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #000b1b, #000814); /* Darker gradient on hover */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Horizontal scrollbar custom styling (if needed) */
+.custom-scrollbar::-webkit-scrollbar-horizontal {
+  height: 8px; /* Height of the horizontal scrollbar */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.custom-scrollbar::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(90deg, #000814, #506078); /* Gradient for the thumb */
 }
+
