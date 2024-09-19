@@ -121,7 +121,7 @@ const dashboard = () => {
   return (
     <div className='text-richblack-5 w-[86vw]  flex items-center flex-col py-5 gap-3 '>
       <div className='w-11/12 flex justify-center flex-col gap-2'>
-    <h1 className='redGradient text-4xl font-semibold ml-4'>Latest Government Scheme</h1>
+    <h1 className='redGradient text-4xl font-semibold ml-4'>Latest Rishi Government Scheme</h1>
           <Carsoule schemes={schemes}/>
       </div>
       <div className='w-11/12 flex justify-center flex-col gap-2'>
